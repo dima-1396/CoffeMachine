@@ -28,7 +28,7 @@ public class Main {
 
         switch (menu) {
             case 1:
-                double WaterAndCoffe = drink.getWaterAndCoffee(CoffeMark);
+                double WaterAndCoffe = drink.getWaterAndCoffe(CoffeMark);
                 System.out.println(WaterAndCoffe);
                 break;
             case 2:

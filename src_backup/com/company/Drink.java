@@ -14,7 +14,7 @@ public class Drink implements IngredientIMPL {
         };
     }
 
-    public double getWaterAndCoffee(String CoffeMark) {
+    public double getWaterAndCoffe(String CoffeMark) {
         int i = 0;
         for(; i < this._machins.length; i++) {
             if (this._machins[i].CoffeMachineMark.equals(CoffeMark)) {
@@ -23,12 +23,12 @@ public class Drink implements IngredientIMPL {
             }
         }
         // found = false; !found = true
-        // found == true; !found = falseа
+        // found == true; !found = false
         // ! - инвертирует логическое значение
         // null - нулевая ссылка (ссылка не указывающая на область памяти)
         if (this._userMachins == null) {
             System.out.println("Нету такой марки");
-      //   return false;
+//            return false;
         }
         // проверяем пин-код
         return this._userMachins.bagWater;
@@ -36,8 +36,8 @@ public class Drink implements IngredientIMPL {
 
     static class CoffeMachine {
         String CoffeMachineMark;
-      private   double bagWater;
-       private double bagCoffee;
+        double bagWater;
+        double bagCoffee;
 
         CoffeMachine(String CoffeMachineMark, double bagWater, double bagCoffee) {
             this.CoffeMachineMark = CoffeMachineMark;
