@@ -6,5 +6,6 @@ public interface IngredientIMPL {
     void americano();
     void espreso();
     void doubleEspreso();
-
+    void setMaxBagWater();
+    void setMaxBagCoffe();
 }

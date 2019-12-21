@@ -46,7 +46,11 @@ public class Main {
                     drink.doubleEspreso();
                     break;
                 case 5:
+                    drink.setMaxBagWater();
+                    break;
                 case 6:
+                    drink.setMaxBagCoffe();
+                    break;
                 case 7:
             }
         }
