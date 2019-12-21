@@ -29,6 +29,7 @@ public class Main {
 
             switch (menu) {
                 case 8:
+                    drink.reject();
                     return;
                 case 1:
                     System.out.print("Количество воды:");
@@ -52,6 +53,8 @@ public class Main {
                     drink.setMaxBagCoffe();
                     break;
                 case 7:
+                    drink.getInfo();
+                    break;
             }
         }
     }

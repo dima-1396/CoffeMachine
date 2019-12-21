@@ -8,4 +8,5 @@ public interface IngredientIMPL {
     void doubleEspreso();
     void setMaxBagWater();
     void setMaxBagCoffe();
+    void getInfo();
 }

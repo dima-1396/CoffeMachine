@@ -14,6 +14,17 @@ public class Drink implements IngredientIMPL {
         };
     }
 
+    public void getInfo() {
+        System.out.print("Максимальный обьем кофе данной кофе машины:");
+        System.out.println(this._userMachins.MaxBagCoffee);
+
+        System.out.print("Максимальный обьем воды данной кофе машины:");
+        System.out.println(this._userMachins.MaxBagWater);
+
+        System.out.print("Марка машины:");
+        System.out.println(this._userMachins.CoffeMachineMark);
+    }
+
     public void setMaxBagWater() {
         boolean success = true;
 
@@ -145,7 +156,9 @@ public class Drink implements IngredientIMPL {
         return this._userMachins.bagCoffee;
     }
 
-
+    public void reject() {
+        this._userMachins = null;
+    }
 
     static class CoffeMachine {
         String CoffeMachineMark;
