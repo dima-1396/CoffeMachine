@@ -37,13 +37,13 @@ public class Main {
                     System.out.println(Coffe);
                     break;
                 case 2:
-                    drink.americano(Water, Coffe);
+                    drink.americano();
                     break;
                 case 3:
-                    drink.espreso(Water, Coffe);
+                    drink.espreso();
                     break;
                 case 4:
-                    drink.doubleEspreso(Water, Coffe);
+                    drink.doubleEspreso();
                     break;
                 case 5:
                 case 6:

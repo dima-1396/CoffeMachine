@@ -14,39 +14,39 @@ public class Drink implements IngredientIMPL {
         };
     }
 
-    public void americano(double water, double coffe) {
+    public void americano() {
         double americanoWater = 5.45;
         double americanoCoffe = 4.45;
         boolean success = true;
 
-        if (water < americanoWater) {
+        if (this._userMachins.bagWater < americanoWater) {
             System.out.println("Не хватает воды для создания американо.");
             success = false;
         }
 
-        if (coffe < americanoCoffe) {
+        if (this._userMachins.bagCoffee < americanoCoffe) {
             System.out.println("Не хватает коффе для создания американо.");
             success = false;
         }
 
         if (success) {
-            this._machins.bagWater = water - americanoWater;
-            coffe = coffe - americanoCoffe;
+            this._userMachins.bagWater -= americanoWater;
+            this._userMachins.bagCoffee -= americanoWater;
             System.out.println("Кофе 'Американо' сделано.");
         }
     }
 
-    public void espreso(double water, double coffe) {
+    public void espreso() {
         double americanoWater = 2.45;
         double americanoCoffe = 5.45;
         boolean success = true;
 
-        if (water < americanoWater) {
+        if (this._userMachins.bagWater < americanoWater) {
             System.out.println("Не хватает воды для создания американо.");
             success = false;
         }
 
-        if (coffe < americanoCoffe) {
+        if (this._userMachins.bagCoffee < americanoCoffe) {
             System.out.println("Не хватает коффе для создания американо.");
             success = false;
         }
@@ -56,17 +56,17 @@ public class Drink implements IngredientIMPL {
         }
     }
 
-    public void doubleEspreso(double water, double coffe) {
+    public void doubleEspreso() {
         double americanoWater = 4.45;
         double americanoCoffe = 8.45;
         boolean success = true;
 
-        if (water < americanoWater) {
+        if (this._userMachins.bagWater < americanoWater) {
             System.out.println("Не хватает воды для создания американо.");
             success = false;
         }
 
-        if (coffe < americanoCoffe) {
+        if (this._userMachins.bagCoffee < americanoCoffe) {
             System.out.println("Не хватает коффе для создания американо.");
             success = false;
         }
