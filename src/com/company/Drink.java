@@ -52,6 +52,8 @@ public class Drink implements IngredientIMPL {
         }
 
         if (success) {
+            this._userMachins.bagWater -= americanoWater;
+            this._userMachins.bagCoffee -= americanoWater;
             System.out.println("Кофе 'Еспрессо' сделано.");
         }
     }
@@ -72,6 +74,8 @@ public class Drink implements IngredientIMPL {
         }
 
         if (success) {
+            this._userMachins.bagWater -= americanoWater;
+            this._userMachins.bagCoffee -= americanoWater;
             System.out.println("Кофе 'Двойное Еспрессо' сделано.");
         }
     }
