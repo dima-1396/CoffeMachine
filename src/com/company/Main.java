@@ -10,34 +10,45 @@ public class Main {
         System.out.println("Выберите марку");
         String CoffeMark = sc.nextLine();
 
-        System.out.println(CoffeMark);
+        while (true) {
+            System.out.println("Главное меню");
+            System.out.println("1. Показать текущий объем воды и кофе");
+            System.out.println("2. Приготовить “Американо”");
+            System.out.println("3. Приготовить “Эспрессо”");
+            System.out.println("4. Приготовить “Двойной эспрессо”");
+            System.out.println("5. Заполнить бак с водой");
+            System.out.println("6. Заполнить бак с кофе");
+            System.out.println("7. Информация");
+            System.out.println("8. Выключить кофемашину");
 
-        System.out.println("Главное меню");
-        System.out.println("1. Показать текущий объем воды и кофе");
-        System.out.println("2. Приготовить “Американо”");
-        System.out.println("3. Приготовить “Эспрессо”");
-        System.out.println("4. Приготовить “Двойной эспрессо”");
-        System.out.println("5. Заполнить бак с водой");
-        System.out.println("6. Заполнить бак с кофе");
-        System.out.println("7. Информация");
-        System.out.println("8. Выключить кофемашину");
+            int menu = sc.nextInt();
 
-        int menu = sc.nextInt();
+            // Получаем текущий воду и кофе нашей кофемашинки.
+            double Water = drink.getWater(CoffeMark);
+            double Coffe = drink.getCoffe(CoffeMark);
 
-        System.out.println(menu);
-
-        switch (menu) {
-            case 1:
-                double WaterAndCoffe = drink.getWaterAndCoffee(CoffeMark);
-                System.out.println(WaterAndCoffe);
-                break;
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-            case 8:
+            switch (menu) {
+                case 8:
+                    return;
+                case 1:
+                    System.out.print("Количество воды:");
+                    System.out.println(Water);
+                    System.out.print("Количество коффе:");
+                    System.out.println(Coffe);
+                    break;
+                case 2:
+                    drink.americano(Water, Coffe);
+                    break;
+                case 3:
+                    drink.espreso(Water, Coffe);
+                    break;
+                case 4:
+                    drink.doubleEspreso(Water, Coffe);
+                    break;
+                case 5:
+                case 6:
+                case 7:
+            }
         }
     }
 }
